@@ -1,127 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Azure Demo Application</title>
-    <!-- Bootstrap CSS -->
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <title>Demo E-Commerce App</title>
     <style>
         body {
-            padding-top: 56px;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
         }
 
-        .hero {
-            background-color: #007bff;
+        header {
+            background-color: #333;
             color: white;
-            padding: 100px 0;
+            padding: 10px 0;
             text-align: center;
         }
 
-        .feature-card {
-            border: none;
-            border-radius: 15px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease;
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            display: flex;
+            flex-wrap: wrap;
         }
 
-        .feature-card:hover {
-            transform: translateY(-5px);
+        .product-card {
+            background-color: white;
+            margin: 10px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            flex: 1 1 300px;
+            text-align: center;
+        }
+
+        .product-card img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 15px;
+        }
+
+        .product-card h3 {
+            margin: 10px 0;
+            font-size: 20px;
+        }
+
+        .product-card p {
+            margin: 10px 0;
+            color: #666;
+        }
+
+        .product-card button {
+            padding: 10px 20px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .product-card button:hover {
+            background-color: #218838;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+            margin-top: 20px;
         }
     </style>
 </head>
-
 <body>
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-        <div class="container">
-            <a class="navbar-brand" href="#">Azure Demo</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
-                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#features">Features</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#about">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contact</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+    <header>
+        <h1>Welcome to the Demo E-Commerce App</h1>
+    </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="container">
-            <h1 class="display-4">Welcome to Azure Demo Application</h1>
-            <p class="lead">Deploy your applications seamlessly with Azure's powerful cloud platform.</p>
-            <a href="#features" class="btn btn-light btn-lg">Explore Features</a>
+    <div class="container">
+        <div class="product-card">
+            <img src="https://via.placeholder.com/150" alt="Product 1">
+            <h3>Product 1</h3>
+            <p>$29.99</p>
+            <button>Add to Cart</button>
         </div>
-    </section>
 
-    <!-- Features Section -->
-    <section id="features" class="py-5">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="card feature-card">
-                        <div class="card-body">
-                            <h5 class="card-title">Scalability</h5>
-                            <p class="card-text">Easily scale your applications to handle millions of users with Azure's cloud infrastructure.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card feature-card">
-                        <div class="card-body">
-                            <h5 class="card-title">Security</h5>
-                            <p class="card-text">Keep your applications and data secure with Azure's enterprise-grade security features.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card feature-card">
-                        <div class="card-body">
-                            <h5 class="card-title">Global Reach</h5>
-                            <p class="card-text">Deploy your applications anywhere in the world with Azure's global data centers.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div class="product-card">
+            <img src="https://via.placeholder.com/150" alt="Product 2">
+            <h3>Product 2</h3>
+            <p>$39.99</p>
+            <button>Add to Cart</button>
         </div>
-    </section>
 
-    <!-- About Section -->
-    <section id="about" class="py-5 bg-light">
-        <div class="container">
-            <h2>About This Application</h2>
-            <p>This is a demo application to showcase the capabilities of Azure for hosting and managing web applications. It features a simple user interface, built with Bootstrap, that is both responsive and visually appealing.</p>
+        <div class="product-card">
+            <img src="https://via.placeholder.com/150" alt="Product 3">
+            <h3>Product 3</h3>
+            <p>$19.99</p>
+            <button>Add to Cart</button>
         </div>
-    </section>
+    </div>
 
-    <!-- Contact Section -->
-    <section id="contact" class="py-5">
-        <div class="container">
-            <h2>Contact Us</h2>
-            <p>If you have any questions or would like to learn more, please reach out to us.</p>
-            <a href="mailto:info@azure-demo.com" class="btn btn-primary">Email Us</a>
-        </div>
-    </section>
-
-    <!-- Bootstrap JS and dependencies -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <footer>
+        <p>&copy; 2024 Demo E-Commerce App. All rights reserved.</p>
+    </footer>
 </body>
-
 </html>
